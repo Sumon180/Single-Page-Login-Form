@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+
+  background: linear-gradient(#5ee629, #ff0077, #00e1ff);
+}
+.container {
+  position: relative;
+  width: 400px;
+  background: #fff;
+  padding: 60px 40px;
+}
+header {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.input-field,
+form .btn {
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  outline: none;
+  padding-left: 15px;
+  font-size: 19px;
+  transition: 0.3s;
+}
+input:focus {
+  border: 1px solid #1da1f2;
+}
+.input-field label,
+span.show {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label {
+  left: 15px;
+  pointer-events: none;
+  color: gray;
+  font-size: 18px;
+  transition: 0.3s;
+}
+span.show {
+  right: 20px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-size: 14px;
+}
+input:valid ~ span.show {
+  visibility: visible;
+}
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-35px);
+  background: #fff;
+  padding: 0 2px;
+  font-size: 16px;
+  color: #1da1f2;
+}
+form .btn {
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 111;
+}
+.btn .inner {
+  position: absolute;
+
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  z-index: -1;
+  transition: all 0.4s;
+  background: -webkit-linear-gradient(
+    right,
+    #00dbde,
+    #fc00ff,
+    #00dbde,
+    #fc00ff
+  );
+}
+.btn:hover .inner {
+  left: 0;
+}
+.btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.container .auth {
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: gray;
+}
+.links {
+  display: flex;
+  cursor: pointer;
+}
+.facebook,
+.google {
+  height: 40px;
+  width: 100%;
+  margin: 0 10px;
+  border: 1px solid silver;
+  transition: 0.4s;
+}
+.facebook:hover {
+  border: 1px solid #4267b2;
+}
+.google:hover {
+  border: 1px solid #4267b2;
+}
+.facebook i,
+.facebook span {
+  color: #4267b2;
+}
+.google i,
+.google span {
+  color: #dd4b39;
+}
+.links i {
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span {
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+}
+.signup {
+  margin-top: 50px;
+}
+.signup a {
+  color: #3498db;
+  text-decoration: none;
+}
+.signup a:hover {
+  text-decoration: underline;
+}
